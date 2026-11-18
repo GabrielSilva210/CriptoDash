@@ -1,17 +1,14 @@
-import SearchBar from '../components/SearchBar'
-import CoinList from '../components/CoinList'
-import MarketOverview from '../components/MarketOverview'
-import { useCryptoSearch } from '../hooks/useCryptoSearch'
+import CoinList from "../components/CoinList";
+import Hero from "../components/Hero";
+import MarketOverview from "../components/MarketOverview";
 
-function Home() {
-  const { coins, loading, error, searched, search } = useCryptoSearch()
-
+function Home({ coins, loading, error, searched }) {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <main className="mx-auto max-w-5xl px-6 py-8">
-        <SearchBar onSearch={search} disabled={loading} />
+    <div className="min-h-full bg-slate-50 text-slate-900">
+      <Hero />
 
-        <section className="mt-4">
+      <div className="mx-auto max-w-5xl px-6 py-8">
+        <section>
           {loading && <p className="text-slate-500">Buscando...</p>}
 
           {error && <p className="text-red-500">{error}</p>}
@@ -26,9 +23,9 @@ function Home() {
         <div className="mt-10">
           <MarketOverview />
         </div>
-      </main>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

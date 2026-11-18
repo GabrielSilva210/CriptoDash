@@ -24,21 +24,21 @@ function MarketOverview() {
             label="Capitalização de Mercado"
             value={data && formatCompactCurrency(data.total_market_cap.brl)}
             change={data?.market_cap_change_percentage_24h_usd}
-            icon={<ChartIcon />}
+            icon={<ChartIcon className="h-8 w-8" />}
             loading={loading}
           />
 
           <StatCard
             label="Volume em 24h"
             value={data && formatCompactCurrency(data.total_volume.brl)}
-            icon={<CoinsIcon />}
+            icon={<CoinsIcon className="h-8 w-8" />}
             loading={loading}
           />
 
           <StatCard
             label="Total de Criptomoedas"
             value={data && formatNumber(data.active_cryptocurrencies)}
-            icon={<CubeIcon />}
+            icon={<CubeIcon className="h-8 w-8" />}
             loading={loading}
           />
         </div>

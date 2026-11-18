@@ -15,8 +15,8 @@ function SearchBar({ onSearch, disabled }) {
 
   return (
     <form role="search" onSubmit={handleSubmit}>
-      <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-100 px-4 py-3 transition-colors focus-within:border-emerald-500 focus-within:bg-white">
-        <span className="text-slate-500">
+      <div className="flex w-full items-center gap-3 rounded-xl border border-white/10 bg-white/10 px-4 py-3 transition-colors focus-within:border-emerald-500">
+        <span className="text-slate-400">
           <SearchIcon />
         </span>
 
@@ -28,7 +28,7 @@ function SearchBar({ onSearch, disabled }) {
           disabled={disabled}
           value={valor}
           onChange={(event) => setValor(event.target.value)}
-          className="w-full bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-500"
+          className="min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-slate-400"
         />
       </div>
     </form>
