@@ -13,7 +13,7 @@ export function useCryptoSearch() {
 
     try {
       const result = await searchCoins(query)
-      setCoins(result.slice(0, 5))
+      setCoins(result.slice(0, 50))
     } catch (err) {
       setError(err.message)
       setCoins([])
