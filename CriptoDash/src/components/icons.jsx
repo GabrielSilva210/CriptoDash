@@ -112,3 +112,21 @@ export const TrendingUpIcon = (props) => (
     <polyline points="16 7 22 7 22 13" />
   </Icon>
 );
+
+export const ListIcon = (props) => (
+  <Icon {...props}>
+    <line x1="9" y1="6" x2="20" y2="6" />
+    <line x1="9" y1="12" x2="20" y2="12" />
+    <line x1="9" y1="18" x2="20" y2="18" />
+    <circle cx="4.5" cy="6" r="1" />
+    <circle cx="4.5" cy="12" r="1" />
+    <circle cx="4.5" cy="18" r="1" />
+  </Icon>
+);
+
+export const TrendingDownIcon = (props) => (
+  <Icon {...props}>
+    <polyline points="22 17 13.5 8.5 8.5 13.5 2 7" />
+    <polyline points="16 17 22 17 22 11" />
+  </Icon>
+);

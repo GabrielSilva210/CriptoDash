@@ -89,6 +89,6 @@ export async function getCoinsMarkets(ids) {
 // alimenta os cards da Home: preço do BTC/ETH e a tendência do market cap.
 export async function getTopMarketsBrl() {
   return request(
-    '/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h',
+    '/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h,7d',
   )
 }

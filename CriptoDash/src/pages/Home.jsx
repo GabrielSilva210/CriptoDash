@@ -33,7 +33,7 @@ function Home({ coins, loading, error, searched, onSelectCoin }) {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 pb-10">
-        <MarketOverview />
+        <MarketOverview onSelectCoin={onSelectCoin} />
       </div>
     </div>
   )
