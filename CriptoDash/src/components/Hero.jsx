@@ -324,12 +324,12 @@ function HeroArt() {
     >
       <defs>
         <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#f8fafc" />
-          <stop offset="1" stopColor="#d5dce6" />
+          <stop offset="0" stopColor="#0f1c2e" />
+          <stop offset="1" stopColor="#1a2c44" />
         </linearGradient>
         <linearGradient id="hero-band" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#ffffff" stopOpacity="0.6" />
-          <stop offset="1" stopColor="#94a3b8" stopOpacity="0.3" />
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0.05" />
+          <stop offset="1" stopColor="#94a3b8" stopOpacity="0.08" />
         </linearGradient>
         <linearGradient id="hero-corner" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor="#134e4a" />
@@ -361,16 +361,16 @@ function Hero() {
         <Coin />
 
         {/* véu para manter o texto legível sobre a arte */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/85 to-transparent sm:via-slate-50/60 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f1c2e] via-[#0f1c2e]/85 to-transparent sm:via-[#0f1c2e]/60 sm:to-transparent" />
 
         <div className="hero-text-in relative flex h-full flex-col justify-center px-8">
-          <p className="text-2xl font-bold tracking-tight text-[#0b1623] sm:text-3xl">
+          <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
             Bem-vindo ao
           </p>
-          <h1 className="text-4xl font-extrabold leading-none tracking-tight text-[#0b1623] sm:text-6xl">
+          <h1 className="text-4xl font-extrabold leading-none tracking-tight text-white sm:text-6xl">
             Cripto<span className="text-emerald-500">Dash</span>
           </h1>
-          <p className="mt-3 max-w-sm text-sm text-slate-700 sm:text-base">
+          <p className="mt-3 max-w-sm text-sm text-slate-300 sm:text-base">
             Acompanhe as principais criptomoedas e fique por dentro de tudo o
             que acontece no mercado.
           </p>

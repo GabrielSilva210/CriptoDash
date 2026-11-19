@@ -83,3 +83,12 @@ export async function getCoinsMarkets(ids) {
     `/coins/markets?vs_currency=${CURRENCY}&ids=${list}&order=market_cap_desc&per_page=250&price_change_percentage=24h`,
   )
 }
+
+
+// Top 100 em BRL com mini-gráfico de 7 dias (sparkline). Uma única chamada
+// alimenta os cards da Home: preço do BTC/ETH e a tendência do market cap.
+export async function getTopMarketsBrl() {
+  return request(
+    '/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=100&page=1&sparkline=true&price_change_percentage=24h',
+  )
+}

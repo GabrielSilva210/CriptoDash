@@ -54,11 +54,10 @@ function Pill({ active, onClick, children }) {
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
-        active
+      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${active
           ? 'bg-orange-500 text-white'
           : 'text-slate-300 hover:bg-white/10'
-      }`}
+        }`}
     >
       {children}
     </button>
@@ -135,7 +134,7 @@ function CoinDetail({ coinId, onBack }) {
     : ''
 
   return (
-    <div className="min-h-screen bg-[#0b0d12] text-white">
+    <div className="min-h-screen bg-[#0f1c2e] text-white">
       <main className="mx-auto max-w-6xl px-6 py-6">
         <button
           type="button"
