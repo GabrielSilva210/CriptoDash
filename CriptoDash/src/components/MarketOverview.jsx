@@ -22,6 +22,15 @@ function MarketOverview({ onSelectCoin }) {
   const btc = coins.find((coin) => coin.id === 'bitcoin')
   const eth = coins.find((coin) => coin.id === 'ethereum')
 
+  // Maiores altas/quedas entre as 100 maiores moedas (variação 24h)
+  const { gainers, losers } = useMemo(() => {
+    const valid = coins.filter((c) => typeof c.price_change_percentage_24h === 'number')
+    const sorted = [...valid].sort(
+      (a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h,
+    )
+    return { gainers: sorted.slice(0, 3), losers: sorted.slice(-3).reverse() }
+  }, [coins])
+
   return (
     <section>
       <h2 className="text-3xl font-bold tracking-tight text-white">
