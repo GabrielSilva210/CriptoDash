@@ -74,3 +74,12 @@ export async function getCoinMarketChart(id, days) {
     `/coins/${encodeURIComponent(id)}/market_chart?vs_currency=${CURRENCY}&days=${days}`,
   )
 }
+
+// Preço e variação 24h de várias moedas de uma vez (usado na sidebar).
+// ids: array de ids da CoinGecko, ex: ['bitcoin', 'ethereum']
+export async function getCoinsMarkets(ids) {
+  const list = ids.map(encodeURIComponent).join(',')
+  return request(
+    `/coins/markets?vs_currency=${CURRENCY}&ids=${list}&order=market_cap_desc&per_page=250&price_change_percentage=24h`,
+  )
+}

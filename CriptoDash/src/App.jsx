@@ -1,7 +1,5 @@
-
 import { useState } from 'react'
 import Sidebar from './components/Sidebar'
-import Header from './components/Header'
 import Home from './pages/Home'
 import CoinDetail from './pages/CoinDetail'
 import { useCryptoSearch } from './hooks/useCryptoSearch'
@@ -12,12 +10,19 @@ export default function App() {
 
   return (
     <div className="flex h-screen bg-slate-50">
-      <Sidebar />
+      <Sidebar
+        coins={coins}
+        selectedCoinId={selectedCoinId}
+        onSelectCoin={setSelectedCoinId}
+        onGoHome={() => setSelectedCoinId(null)}
+        onSearch={search}
+        searching={loading}
+      />
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <Header onSearch={search} disabled={loading} />
 
         <main className="flex-1 overflow-y-auto">
+
 
           <div hidden={selectedCoinId !== null}>
             <Home
@@ -36,8 +41,8 @@ export default function App() {
               onBack={() => setSelectedCoinId(null)}
             />
           )}
-
         </main>
+
       </div>
     </div>
   )

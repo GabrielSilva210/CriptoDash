@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import { SearchIcon } from './icons'
 
-function SearchBar({ onSearch, disabled }) {
+function SearchBar({
+  onSearch,
+  disabled,
+  placeholder = 'Buscar por criptomoeda (ex: Bitcoin, Ethereum...)',
+}) {
   const [valor, setValor] = useState('')
 
   function handleSubmit(event) {
@@ -22,7 +26,7 @@ function SearchBar({ onSearch, disabled }) {
 
         <input
           type="search"
-          placeholder="Buscar por criptomoeda (ex: Bitcoin, Ethereum...)"
+          placeholder={placeholder}
           aria-label="Buscar por criptomoeda"
           autoComplete="off"
           disabled={disabled}
